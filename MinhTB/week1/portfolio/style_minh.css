@@ -1,0 +1,229 @@
+:root {
+  --main-color: #4f46e5;
+  --bg-color: #f3f4f6;
+  --text-color: #111827;
+  --gray: #6b7280;
+  --radius: 12px;
+  --font-main: "Poppins", sans-serif;
+  --font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-main);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  background: #f8f8f8;
+}
+.left-column,
+.right-column {
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px #1b418d;
+}
+.left-column {
+  /* background-color: #4f46e5; */
+}
+.right-column {
+  /* background-color: #6b7280; */
+}
+.ggfont {
+  font-family: "Playwrite HU", cursive;
+  font-weight: 200;
+}
+.contact ul{
+  list-style: none;
+  padding: 0;
+}
+.contact li{
+  margin-bottom: 0.5rem;
+}
+.contact h2{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.hello{
+  padding-bottom: 3rem;
+}
+.contact-grid{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1.5rem 2rem;
+}
+.contact-item{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size);
+}
+.contact-item i{
+  font-size: 14px;
+  min-width: 20px;
+}
+.contact-item a{
+  /* color: #f3f4f6; */
+  text-decoration: none;
+}
+.contact-item a:hover{
+  text-decoration: underline;
+}
+.contact{
+  margin-bottom: 30px;
+}
+.education{
+  /* margin-top: 2rem; */
+}
+.education-grid{
+  padding-top: 1rem;
+}
+.education-item{
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  gap: 10px;
+}
+.education-info p{
+  margin: 0.25rem 5px 0;
+}
+.languages{
+  border-radius: var(--radius);
+  border: 1px #111827;
+  display: block;
+}
+.languages ul li {
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  padding: 6px 12px;
+  margin-bottom: 8px;
+  list-style: none;
+}
+.languages .languages-name{
+  font-weight: bold;
+  font-family: cursive;
+  padding-right: 1rem;
+}
+.languages .languages-lv{
+  font-style: italic;
+  color: #278b6a;
+  text-align: center;
+}
+.languages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.languages ul {
+  padding-top: 20px;
+}
+.mid-column {
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px #1b418d;
+  display: grid;
+}
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.software-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: var(--radius);
+  background-color: #f3f4f6;
+}
+.mid-column {
+  width: 100%;
+  flex-basis: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  /* Nếu dùng flex, đảm bảo nó chiếm nguyên hàng */
+  order: 10; /* Để nó xuống dưới cùng nếu cần */
+}
+.avatar {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.containerr {
+  display: grid;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  background: #f8f8f8;
+}
+.software-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: var(--radius);
+  background-color: #f3f4f6;
+}
+.software i {
+  font-size: 24px;
+  color: #4f46e5;
+}
+.software ul {
+  list-style: none;
+}
+.software-item .software-name {
+  font-weight: bold;
+  font-family: cursive;
+}
+.software-grid {
+  gap: 0.5rem;
+  padding-top: 15px;
+}
+.container-skill {
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+  background: #f8f8f8;
+}
+.skill-left,
+.skill-right {
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px #1b418d;
+}
+.skill-grid {
+  display: grid;
+  gap: 0.5rem;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+.education-grid {
+  padding-top: 1rem;
+  padding-left: 15px;
+}
+.avatar {
+  width: auto;
+  height: 500px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 4px solid white;
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
