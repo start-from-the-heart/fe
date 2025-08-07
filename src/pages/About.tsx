@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import profileImg from "../assets/images/my-image.jpg";
+import CalculatorModal from "./CalculatorModal";
 
 const About: React.FC = () => {
   const { t } = useTranslation();
+  const [showCalculator, setShowCalculator] = useState(false);
 
   return (
     <section className="p-6 overflow-y-auto max-h-[600px] border rounded-md shadow-md bg-white dark:bg-gray-900">
@@ -17,12 +19,25 @@ const About: React.FC = () => {
           <p className="text-sm">✉️ lehoanganh.1203@gmail.com</p>
           <p className="text-sm">🎓 Đại học FPT Hà Nội</p>
         </div>
-        <img
-          src={profileImg}
-          alt="Profile"
-          className="w-40 h-40 rounded-full object-cover shadow-md border border-gray-300 dark:border-gray-700"
-        />
+        <div className="flex flex-col items-center gap-3">
+          <img
+            src={profileImg}
+            alt="Profile"
+            className="w-40 h-40 rounded-full object-cover shadow-md border border-gray-300 dark:border-gray-700"
+          />
+          <button
+            type="button"
+            onClick={() => setShowCalculator(true)}
+            className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center"
+          >
+            {t("calculator")}
+          </button>
+        </div>
       </div>
+
+      {showCalculator && (
+        <CalculatorModal onClose={() => setShowCalculator(false)} />
+      )}
 
       {/* Skills */}
       <div className="mb-8">
@@ -32,12 +47,6 @@ const About: React.FC = () => {
           <li>HTML, SCSS, TailwindCSS</li>
           <li>Gitlab, Github</li>
         </ul>
-        {/* <div className="mb-2 flex items-center gap-2">
-          <span className="text-sm w-20">React:</span>
-          <div className="flex-1 bg-gray-200 rounded h-2">
-            <div className="bg-blue-500 h-2 rounded w-4/5"></div>
-          </div>
-        </div> */}
       </div>
 
       {/* Work Experience */}
