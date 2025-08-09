@@ -1,0 +1,98 @@
+.container {
+  display: grid;
+   /* Bật chế độ grid */
+
+  /* grid-template-columns: 200px 200px 200px; */
+   /* 3 cột, mỗi cột rộng 200px */
+
+  grid-template-rows: 150px 150px;
+   /* 2 hàng, mỗi hàng cao 150px */
+
+  gap: 10px;
+   /* khoảng cách giữa các ô */
+
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  /* Cột 1 chiếm 1 phần, cột 2 chiếm 2 phần, cột 3 chiếm 1 phần */
+
+  grid-template-columns: repeat(3, 1fr);
+   /* 3 cột, mỗi cột bằng nhau */
+
+}
+
+.item1 {
+  grid-column: 1 / 3;
+   /* chiếm từ cột 1 đến cột 2 */
+
+  /* grid-row: 1 / 2; */
+      /* chỉ ở hàng 1 */
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+}
+
+/* GRID CONTAINER */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cột bằng nhau */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* CARD STYLE */
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+
+/* MEDIA QUERIES */
+/* Tablet: <= 768px => 2 cột */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: <= 480px => 1 cột */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+

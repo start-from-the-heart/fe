@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* --- Grid Layout cho màn hình lớn --- */
+body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* 3 cột: nav, main, aside */
+  grid-template-rows: auto 1fr auto; /* header, content, footer */
+  gap: 10px;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+}
+
+/* Gán khu vực cho từng phần */
+header {
+  grid-area: header;
+  background: #ffdd57;
+}
+nav {
+  grid-area: nav;
+  background: #6c5ce7;
+  color: white;
+}
+main {
+  grid-area: main;
+  background: #00cec9;
+  color: white;
+}
+aside {
+  grid-area: aside;
+  background: #fab1a0;
+}
+footer {
+  grid-area: footer;
+  background: #2d3436;
+  color: white;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr; /* 1 cột */
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+  }
+}

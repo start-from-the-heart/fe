@@ -26,17 +26,27 @@
         color: brown;
         font-size: 3rem;
       }
+      .container * {
+        display: block;
+        margin-bottom: 10px;
+      }
     </style>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <h1 id="top" style="color: aqua; font-size: 30px">Helloo, I am BayMax</h1>
+    <a href="#end" id="top">tail</a>
+    <h1 style="color: aqua; font-size: 30px">Helloo, I am BayMax</h1>
     <h2 class="red lowercase">Helloo, I am BayMax</h2>
     <h3 class="green">Helloo, I am BayMax</h3>
     <h4 class="blue">Helloo, I am BayMax</h4>
     <h5>Helloo, I am BayMax</h5>
     <h6>Helloo, I am BayMax</h6>
+
+    <div class="container">
+      <img src="./demo.jpg" alt="img demo" class="img-card" loading="eager" />
+      <p class="overlay">Lorem ipsum dolor sit amet conse.</p>
+    </div>
 
     <h1>Helloo, I am BayMax</h1>
     <h3>Helloo, I am BayMax</h3>
@@ -127,6 +137,21 @@
       <button type="submit">Submit</button>
     </form>
 
+    <br /><br /><br /><br />
+    <input type="text" name="" id="" />
+    <input type="password" name="" id="" />
+    <input type="checkbox" name="" id="" />
+    <input type="number" name="" id="" />
+    <input type="color" name="" id="" />
+    <input type="date" name="" id="" />
+    <input type="time" name="" id="" />
+    <input type="search" name="" id="" />
+    <input type="file" name="" id="" />
+    <input type="range" name="" id="" />
+    <input type="radio" name="" id="" />
+    <input type="submit" name="" id="" />
+    <input type="week" name="" id="" />
+
     <table>
       <tr>
         <th>Title A</th>
@@ -154,7 +179,6 @@
       <a href="#" id="two">outline</a>
     </div>
 
-    <img src="/demo.jpg" alt="img demo" style="width: 500px" loading="lazy" />
     <br />
     <a
       href="https://www.youtube.com/watch?v=K601I5gP0_I&list=RDiFoLKvdqXk8&index=16"
@@ -162,6 +186,50 @@
       >linkkkk</a
     >
     <br />
-    <a href="#top">back top</a>
+
+
+    <img
+      src="./TBM_free-file.png"
+      alt="img demo"
+      style="width: 500px"
+      loading="eager"
+      class="img1"
+    />
+
+    <img
+      src="./TBM_free-file.png"
+      alt="img demo"
+      style="width: 500px"
+      loading="eager"
+      class="img2"
+    />
+    <br /><br />
+    <div class="container">
+      <input id="qr" placeholder="Enter link QR" />
+      <img alt="QR Code" id="qrimg" />
+      <button
+        onclick="qrimg.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data='+qr.value"
+      >
+        Generate QR
+      </button>
+    </div>
+    <br /><br />
+    <input type="text" list="languages" placeholder="Enter link QR" />
+    <datalist id="languages">
+      <option value="Java"></option>
+      <option value="Python"></option>
+      <option value="JS"></option>
+      <option value="Php"></option>
+    </datalist>
+
+    <br /><br />
+    <input type="password" id="pwd" placeholder="Enter password" />
+    <input
+      type="checkbox"
+      id=""
+      onclick="pwd.type = this.checked ? 'text' : 'password'"
+    />
+
+    <a href="#top" id="end">back top</a>
   </body>
 </html>

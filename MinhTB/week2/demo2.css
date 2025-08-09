@@ -1,0 +1,101 @@
+/* p trực tiếp của div */
+div > p{
+    color: red;
+}
+
+/* p con của div */
+div p{
+    color: blue;
+}
+/* p con của div có class là "active" */
+div p.active{
+    color: green;
+}
+/* p con của div có id là "main" */
+div p#main{
+    color: yellow;
+}
+/* p con của div có class là "active" và id là "main" */
+div p.active#main{
+    color: purple;
+}
+/* p con của div có class là "active" hoặc id là "main" */
+div p.active, div p#main{
+    color: orange;
+}
+/* p con của div có class là "active" và id là "main" hoặc p trực tiếp của div */
+div p.active#main, div > p{ 
+    color: pink;
+}
+/* p con của div có class là "active" hoặc id là "main" hoặc p trực tiếp của div */
+div p.active, div p#main, div > p{
+    color: brown;
+}
+/* chọn p ngay sau h2 */
+h2 + p {
+  color: green;
+}
+/* chọn p cùng cấp, sau h2 */
+h2 ~ p {
+  color: blue;
+}
+/* chọn theo thuộc tính */
+input[type="checkbox"] {
+  margin-left: 18px;
+}
+/* chọn theo thuộc tính và giá trị */
+input[type="checkbox"]:checked {
+  accent-color: yellow;
+}
+/* phần tử thứ n lẻ */
+ul li:nth-child(odd) { background: #eee; }
+/* phần tử đầu tiên */
+ul li:first-child { font-weight: bold; }
+
+/* phần tử cuối cùng */
+ul li:last-child { font-style: italic; }
+
+/* Thêm nội dung ảo trước phần tử */
+h1::after {
+  content: " 🔥";
+  color: red;
+}
+h1::before {
+  content: " ĐÁ";
+  color: red;
+}
+
+div:not(.active) {
+  opacity: 0.5;
+}
+:is(h1, h2, h3) {
+  margin-bottom: 14px;
+}
+
+article:has(img) {
+  border: 1px solid rgb(228, 18, 18);
+}
+.fruits > .hot {
+  background-color:yellow;
+}
+.fruits > #special {
+  display: none
+}
+.fruits > li:first-child {
+  font-weight: bold;
+}
+.fruits :not(#special) {
+  background-color: gray;
+}
+.fruits .hot:hover {
+  color: red;
+}
+.fruits li .hot::before {
+  content: "  🔥";
+}
+input[type="checkbox"]:checked {
+  border: 1px solid blue;
+}
+h2:first-child {
+  color: green;
+}
