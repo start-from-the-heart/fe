@@ -10,6 +10,13 @@ const CalculatorModal: React.FC<CalculatorModalProps> = ({ onClose }) => {
   const [num2, setNum2] = useState<number | string>("");
   const [result, setResult] = useState<number | null>(null);
 
+  const operators = [
+    { symbol: "+", color: "bg-green-600 hover:bg-green-700" },
+    { symbol: "-", color: "bg-red-600 hover:bg-red-700" },
+    { symbol: "*", color: "bg-yellow-600 hover:bg-yellow-700" },
+    { symbol: "/", color: "bg-purple-600 hover:bg-purple-700" },
+  ];
+
   const handleCalc = (op: string) => {
     const a = parseFloat(num1.toString());
     const b = parseFloat(num2.toString());
@@ -49,23 +56,23 @@ const CalculatorModal: React.FC<CalculatorModalProps> = ({ onClose }) => {
             value={num1}
             onChange={(e) => setNum1(e.target.value)}
             className="border p-2 rounded"
-            placeholder="Số thứ nhất"
+            placeholder="Input 1"
           />
           <input
             type="number"
             value={num2}
             onChange={(e) => setNum2(e.target.value)}
             className="border p-2 rounded"
-            placeholder="Số thứ hai"
+            placeholder="Input 2"
           />
           <div className="flex justify-between">
-            {["+", "-", "*", "/"].map((op) => (
+            {operators.map(({ symbol, color }) => (
               <button
-                key={op}
-                onClick={() => handleCalc(op)}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded"
+                key={symbol}
+                onClick={() => handleCalc(symbol)}
+                className={`${color} text-white px-3 py-1 rounded`}
               >
-                {op}
+                {symbol}
               </button>
             ))}
           </div>
