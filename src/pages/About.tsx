@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import profileImg from "../assets/images/my-image.jpg";
 import CalculatorModal from "./CalculatorModal";
+import TodoModal from "./TodoModal";
 
 const About: React.FC = () => {
   const { t } = useTranslation();
+
   const [showCalculator, setShowCalculator] = useState(false);
+  const [showTodo, setShowTodo] = useState(false);
 
   return (
     <section className="p-6 overflow-y-auto max-h-[600px] border rounded-md shadow-md bg-white dark:bg-gray-900">
@@ -32,12 +35,22 @@ const About: React.FC = () => {
           >
             {t("calculator")}
           </button>
+
+          <button
+            type="button"
+            onClick={() => setShowTodo(true)}
+            className="text-white bg-green-700 hover:bg-green-800 font-medium rounded-full text-sm px-5 py-2.5 text-center"
+          >
+            {t("to-do-app")}
+          </button>
         </div>
       </div>
 
       {showCalculator && (
         <CalculatorModal onClose={() => setShowCalculator(false)} />
       )}
+
+      {showTodo && <TodoModal onClose={() => setShowTodo(false)} />}
 
       {/* Skills */}
       <div className="mb-8">
