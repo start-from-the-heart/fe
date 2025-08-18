@@ -1,0 +1,39 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+}
+input,
+button {
+  padding: 5px;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+.deleteBtn {
+  color: white;
+  background: red;
+  border: none;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+.editBtn {
+  color: white;
+  background: orange;
+  border: none;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+.completeBtn {
+  color: white;
+  background: green;
+  border: none;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}

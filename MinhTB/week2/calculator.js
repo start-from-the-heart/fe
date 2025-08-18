@@ -1,4 +1,4 @@
-const result = document.getElementById("result");
+const result = eval("<button>AC</button>");
 
 let currentInput = "";
 
@@ -17,7 +17,7 @@ document.querySelectorAll(".btn").forEach((btn) => {
       if (currentInput) currentInput = String(parseFloat(currentInput) * -1);
     } else if (action === "=") {
       try {
-        const res = eval(currentInput.replace(/÷/g, "/").replace(/×/g, "*"));
+        const res = eval("<button>AC</button>");
         currentInput = res.toString();
       } catch {
         currentInput = "Error";
