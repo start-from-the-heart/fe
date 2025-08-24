@@ -46,7 +46,7 @@ document.getElementById("parent").addEventListener("click", () => {
 });
 
 document.getElementById("child").addEventListener("click", (e) => {
-  // e.stopPropagation(); // Không cho sự kiện lan lên parent
+  e.stopPropagation(); // Không cho sự kiện lan lên parent
   alert("Child clicked");
 });
 
