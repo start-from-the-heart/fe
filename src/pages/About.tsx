@@ -3,9 +3,12 @@ import { useTranslation } from "react-i18next";
 import profileImg from "../assets/images/my-image.jpg";
 import CalculatorModal from "./CalculatorModal";
 import TodoModal from "./TodoModal";
+import { useNavigate } from "react-router-dom";
 
 const About: React.FC = () => {
   const { t } = useTranslation();
+
+  const navigate = useNavigate();
 
   const [showCalculator, setShowCalculator] = useState(false);
   const [showTodo, setShowTodo] = useState(false);
@@ -31,7 +34,7 @@ const About: React.FC = () => {
           <button
             type="button"
             onClick={() => setShowCalculator(true)}
-            className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-full text-sm px-5 py-2.5 text-center"
+            className="text-white bg-blue-700 font-medium rounded-full text-sm px-5 py-2"
           >
             {t("calculator")}
           </button>
@@ -39,9 +42,16 @@ const About: React.FC = () => {
           <button
             type="button"
             onClick={() => setShowTodo(true)}
-            className="text-white bg-green-700 hover:bg-green-800 font-medium rounded-full text-sm px-5 py-2.5 text-center"
+            className="text-white bg-green-700 font-medium rounded-full text-sm px-5 py-2"
           >
             {t("to-do-app")}
+          </button>
+
+          <button
+            onClick={() => navigate("/pokemon")}
+            className="mt-4 bg-yellow-500 font-medium rounded-full text-sm px-5 py-2"
+          >
+            Pokemon
           </button>
         </div>
       </div>

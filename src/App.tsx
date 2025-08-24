@@ -1,7 +1,8 @@
 import React from "react";
-import About from "./pages/About";
 import LanguageSelector from "./pages/LanguageSelector";
 import ThemeSelector from "./pages/ThemeSelector";
+import { BrowserRouter } from "react-router-dom";
+import RouterConfig from "./router/router";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
         <LanguageSelector />
         <ThemeSelector />
       </div>
-      <About />
+      <BrowserRouter>
+        <RouterConfig />
+      </BrowserRouter>
     </div>
   );
 }
