@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './assets/css/_variables.scss';
+
+
+:root {
+    --bg-color: #{$bg-white};
+    
+    --primary: #{$primary};
+    --primary-25: #{$primary-25};
+    --primary-50: #{$primary-50};
+    --primary-100: #{$primary-100};
+    --primary-200: #{$primary-200};
+    --primary-300: #{$primary-300};
+    --primary-400: #{$primary-400};
+    --primary-500: #{$primary-500};
+    --primary-600: #{$primary-600};
+    --primary-700: #{$primary-700};
+    --primary-800: #{$primary-800};
+    --primary-900: #{$primary-900};
+}
+
+html.dark {
+    --bg-color: #{$bg-dark};
+
+    --primary: #{$primary-dark};
+    --primary-25: #{$primary-dark-25};
+    --primary-50: #{$primary-dark-50};
+    --primary-100: #{$primary-dark-100};
+    --primary-200: #{$primary-dark-200};
+    --primary-300: #{$primary-dark-300};
+    --primary-400: #{$primary-dark-400};
+    --primary-500: #{$primary-dark-500};
+    --primary-600: #{$primary-dark-600};
+    --primary-700: #{$primary-dark-700};
+    --primary-800: #{$primary-dark-700};
+    --primary-900: #{$primary-dark-900};
+}
