@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="weather.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- LEFT SIDE -->
+      <div class="left">
+        <div class="temp">16°</div>
+        <div class="location">
+          <div class="city">London</div>
+          <div class="date">06:09 - Monday, 9 Sep '23</div>
+        </div>
+        <div class="icon">☁️</div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="right">
+        <div class="search">
+          <input type="text" placeholder="Search Location..." />
+          <button>🔍</button>
+        </div>
+
+        <h3>Weather Details...</h3>
+        <div class="details">
+          <p id="description"><strong>THUNDERSTORM WITH LIGHT DRIZZLE</strong></p>
+
+          <div class="row">
+            <span>Temp max</span>
+            <span id="temp-max">19°</span>
+          </div>
+
+          <div class="row">
+            <span>Temp min</span>
+            <span id="temp-min">15°</span>
+          </div>
+
+          <div class="row">
+            <span>Humidity</span>
+            <span id="humidity">58%</span>
+          </div>
+
+          <div class="row">
+            <span>Cloudy</span>
+            <span id="cloudy">86%</span>
+          </div>
+
+          <div class="row">
+            <span>Wind</span>
+            <span id="wind">5 km/h</span>
+          </div>
+        </div>
+
+        <h3>Today's Weather Forecast...</h3>
+        <div class="forecast">
+          <div class="row">
+            <span class="time">09:00</span>
+            <span class="status">Snow 🌨️</span>
+            <span class="temp">19°</span>
+          </div>
+
+          <div class="row">
+            <span class="time">12:00</span>
+            <span class="status">Cloudy ☁️</span>
+            <span class="temp">18°</span>
+          </div>
+
+          <div class="row">
+            <span class="time">15:00</span>
+            <span class="status">Rain 🌧️</span>
+            <span class="temp">17°</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="weather.js"></script>
+  </body>
+</html>
